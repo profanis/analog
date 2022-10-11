@@ -13,7 +13,9 @@
     "test": "nx run-many --target test --all",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "api:dev": "PORT=3100 nitro dev",
+    "api:build": "nitro build"
   },
   "keywords": [
     "vite-plugin",
@@ -84,6 +86,7 @@
     "kolorist": "^1.6.0",
     "lint-staged": "^13.0.3",
     "minimist": "^1.2.7",
+    "nitropack": "^0.5.4",
     "nx": "14.8.4",
     "playwright": "^1.27.1",
     "prettier": "^2.7.1",
