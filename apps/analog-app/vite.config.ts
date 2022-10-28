@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 
-import nitro from '@analogjs/nitro';
+import platform from '@analogjs/platform';
 import angular from '@analogjs/vite-plugin-angular';
 import { offsetFromRoot } from '@nrwl/devkit';
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -30,14 +30,11 @@ export default defineConfig(({ mode }) => {
       }),
       visualizer() as Plugin,
       splitVendorChunkPlugin(),
-      nitro({
-        srcDir: './src/server/',
+      platform({
         output: {
-          serverDir: `../${offsetFromRoot('apps/analog-app/src')}/dist/server`,
+          dir: `${offsetFromRoot('apps/analog-app/src/server')}/dist/server`,
         },
-        port: 8088,
-        dev: mode !== 'production',
-      }) as Plugin,
+      }),
     ],
     test: {
       globals: true,

@@ -13,9 +13,7 @@
     "test": "nx run-many --target test --all",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
-    "api:dev": "PORT=3100 nitro dev",
-    "api:build": "nitro build"
+    "contributors:generate": "all-contributors generate"
   },
   "keywords": [
     "vite-plugin",
